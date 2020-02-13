@@ -28,6 +28,12 @@ class EarthquakesViewController: UIViewController {
             
             //TODO update the UI
             print("Quakes: \(quakes)")
+            
+            //Setup MapKit View
+            DispatchQueue.main.async {
+                self.mapView.addAnnotations(quakes)
+            }
+            
         }
 		
 	}
